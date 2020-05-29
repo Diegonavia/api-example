@@ -2,22 +2,24 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const guitarRouter = require("./api/recursos/guitars/guitar.routes");
-const logger = require('./utils/logger')
-const morgan = require('morgan')
+const logger = require("./utils/logger");
+const morgan = require("morgan");
 
 const app = express();
 
 //Middlewares
 app.use(bodyParser.json());
-app.use(morgan('short', {
+app.use(
+  morgan("short", {
     stream: {
-        write: message => logger.info(message)
-    }
-}));
+      write: (message) => logger.info(message),
+    },
+  })
+);
 app.use("/guitars", guitarRouter);
 
 app.get("/", (req, res) => {
-  res.json("API de ENC");
+  res.json("API DEL BECERRO ALEJANDRO QLO");
 });
 
 app.listen(3000, () => {
