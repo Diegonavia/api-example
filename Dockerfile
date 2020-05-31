@@ -4,4 +4,8 @@ COPY package.json ./
 RUN npm install 
 COPY ./ ./ 
 CMD ["npm", "start"]    
-EXPOSE 8080
+
+FROM nginx
+EXPOSE 80
+COPY --from=0 /usr/app /usr/share/nginx/html
+
