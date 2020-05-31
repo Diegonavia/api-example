@@ -19,7 +19,7 @@ app.use(
 app.use("/guitars", guitarRouter);
 
 app.get("/", (req, res) => {
-  res.json("API DEL BECERRO ALEJANDRO QLO");
+  res.json("api del qlo alejandro!!!");
 });
 
 app.listen(3000, () => {
