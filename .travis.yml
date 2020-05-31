@@ -4,3 +4,15 @@ services:
 
 before_install:
   - docker build -t diegonavia/api-example .
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "api-example"
+  env: "ApiExample-env"
+  bucket_name: "elasticbeanstalk-us-east-1-375849559716"
+  bucket_path: "api-example"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
