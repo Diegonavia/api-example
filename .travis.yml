@@ -11,7 +11,7 @@ deploy:
   region: "us-east-1"
   app: "api-example"
   env: "ApiExample-env"
-  bucket_name: "elasticbeanstalk-us-east-1-375849559716"
+  bucket_name: "	elasticbeanstalk-us-east-1-375849559716"
   bucket_path: "api-example"
   on:
     branch: master
