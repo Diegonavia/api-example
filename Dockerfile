@@ -5,7 +5,6 @@ RUN npm install
 COPY ./ ./ 
 CMD ["node", "index.js"]
 
-
 FROM node:alpine as production
 WORKDIR '/usr/src/app'
 COPY package*.json ./
