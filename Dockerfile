@@ -15,5 +15,4 @@ CMD ["npm", "run", "build"]
 
 FROM nginx 
 COPY --from=development /usr/src/app /usr/share/nginx/html
-EXPOSE 80
 
