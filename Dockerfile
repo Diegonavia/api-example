@@ -14,5 +14,5 @@ CMD ["npm", "run", "build"]
 #CMD ["npm", "start"]
 
 FROM nginx 
+EXPOSE 80
 COPY --from=development /usr/src/app /usr/share/nginx/html
-
