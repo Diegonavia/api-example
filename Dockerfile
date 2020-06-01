@@ -3,7 +3,7 @@ WORKDIR '/usr/src/app'
 COPY package*.json ./
 RUN npm install 
 COPY ./ ./ 
-CMD ["npm", "run", "build"]
+RUN npm run build
 
 # FROM node:alpine as production
 #WORKDIR '/usr/src/app'
